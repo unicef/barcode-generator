@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+$brand-color: rgb(0,155,255);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: Helvetica;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  line-height: 3rem;
+}
+
+label {
+  line-height: 2rem;
+  display: block;
+}
+
+input {
+  font-size: 1.4rem;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radiu: 2px;
+  width: 100%;
+}
+
+.button-grp {
+  button.active {
+
+  }
+}
+button {
+  border-radius: 2px;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+
+  &.active {
+    color: $brand-color;
+  }
+}
+
+// GRID SYSTEM
+
+.grid-container {
+ display: grid;
+ grid-template-columns: 300px 1fr;
+ grid-gap: 20px;
+}
