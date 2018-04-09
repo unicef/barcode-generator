@@ -1,12 +1,12 @@
 <form>
   <div>
-    <label for="po-number">Delivery number</label>
-    <input type="text" id="po-number" name="po-number" [(ngModel)]="barcode.deliveryNumber" required>
+    <label for="delivery-number">Delivery number</label>
+    <input type="text" id="delivery-number" name="delivery-number" [(ngModel)]="barcode.deliveryNumber" required>
   </div>
 
   <div>
-    <label for="po-item-number">Item number</label>
-    <input type="text" id="po-item-number" name="po-item-number" [(ngModel)]="barcode.itemNumber" required>
+    <label for="item-number">Item number</label>
+    <input type="text" id="item-number" name="po-item-number" [(ngModel)]="barcode.itemNumber" required>
   </div>
   <div>
     <button type="text"  (click)="generateBarcode()">Generate barcode</button>

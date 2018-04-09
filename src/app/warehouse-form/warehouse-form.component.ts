@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { WarehouseBarcode } from '../warehouse-barcode'
 @Component({
   selector: 'app-warehouse-form',
   templateUrl: './warehouse-form.component.html',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarehouseFormComponent implements OnInit {
 
+  @Input('outputTo') outputElementId: string = "barcodes";
+
+  public barcode = new WarehouseBarcode();
   constructor() { }
 
   ngOnInit() {
   }
+
+  generateBarcode() {
+    //build payload
+    let datamatrix = this.barcode.generateBarcode('datamatrix');
+    let code128 = this.barcode.generateBarcode('code128');
+    //console.log(barcodeCanvas);
+    document.getElementById(this.outputElementId).appendChild(datamatrix);
+    document.getElementById(this.outputElementId).appendChild(code128);
+
+  }
+
 
 }
