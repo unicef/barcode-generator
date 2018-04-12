@@ -11,4 +11,8 @@ export class WarehouseBarcode extends Barcode {
   buildPayload() : string {
     return this.deliveryNumber + this.itemNumber;
   }
+
+  barcodeType() : string {
+    return 'warehouse'
+  }
 }

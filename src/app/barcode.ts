@@ -40,4 +40,5 @@ export abstract class Barcode {
   */
   abstract buildPayload(): string;
 
+  abstract barcodeType(): string;
 }

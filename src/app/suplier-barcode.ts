@@ -25,4 +25,8 @@ export class SuplierBarcode extends Barcode {
       + this.expiryDate);
   }
 
+  barcodeType() : string {
+    return 'suplier'
+  }
+
 }

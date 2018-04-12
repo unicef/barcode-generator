@@ -8,11 +8,17 @@
       <button (click)="showForm('supliers')" [ngClass]="{'active':(selectedForm=='supliers')}" >Supliers barcode</button>
       <button (click)="showForm('warehouse')" [ngClass]="{'active':(selectedForm=='warehouse')}">Warehouse barcode</button>
     </div>
-    <app-supliers-form [hidden]="selectedForm!='supliers'"></app-supliers-form>
-    <app-warehouse-form [hidden]="selectedForm!='warehouse'"></app-warehouse-form>
+    <div [hidden]="selectedForm!='supliers'">
+      <app-supliers-form barcode="suplierBarcode"></app-supliers-form>
+      <button type="text" (click)="generateSuplierBarcode()">Generate barcode</button>
+    </div>
+    <div [hidden]="selectedForm!='warehouse'">
+    <app-warehouse-form barcode="warehouseBarcode"></app-warehouse-form>
+    <button type="text" (click)="generateWarehouseBarcode()">Generate barcode</button>
+  </div>
   </section>
 
   <section class="barcodes" id="barcodes">
-    <!-- <app-barcode-list [list]="barcodeList"></app-barcode-list>-->
+      <app-barcode-list></app-barcode-list>
   </section>
 </div>

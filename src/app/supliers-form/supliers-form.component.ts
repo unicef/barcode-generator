@@ -7,9 +7,7 @@ import { SuplierBarcode } from '../suplier-barcode'
   styleUrls: ['./supliers-form.component.scss']
 })
 export class SupliersFormComponent implements OnInit {
-  @Input('outputTo') outputElementId: string = "barcodes";
-
-  barcode = new SuplierBarcode();
+  @Input('barcode') barcode: SuplierBarcode
 
   constructor() {
   }
@@ -19,11 +17,11 @@ export class SupliersFormComponent implements OnInit {
 
   generateBarcode() {
     //build payload
-    let datamatrix = this.barcode.generateBarcode('datamatrix');
-    let code128 = this.barcode.generateBarcode('code128');
+    //let datamatrix = this.barcode.generateBarcode('datamatrix');
+    //let code128 = this.barcode.generateBarcode('code128');
     //console.log(barcodeCanvas);
-    document.getElementById(this.outputElementId).appendChild(datamatrix);
-    document.getElementById(this.outputElementId).appendChild(code128);
+    //document.getElementById(this.outputElementId).appendChild(datamatrix);
+    //document.getElementById(this.outputElementId).appendChild(code128);
 
   }
 

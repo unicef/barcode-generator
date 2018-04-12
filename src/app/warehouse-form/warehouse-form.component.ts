@@ -7,9 +7,8 @@ import { WarehouseBarcode } from '../warehouse-barcode'
 })
 export class WarehouseFormComponent implements OnInit {
 
-  @Input('outputTo') outputElementId: string = "barcodes";
+  @Input('barcode') barcode: WarehouseBarcode
 
-  public barcode = new WarehouseBarcode();
   constructor() { }
 
   ngOnInit() {
@@ -17,11 +16,11 @@ export class WarehouseFormComponent implements OnInit {
 
   generateBarcode() {
     //build payload
-    let datamatrix = this.barcode.generateBarcode('datamatrix');
-    let code128 = this.barcode.generateBarcode('code128');
+//    let datamatrix = this.barcode.generateBarcode('datamatrix');
+//    let code128 = this.barcode.generateBarcode('code128');
     //console.log(barcodeCanvas);
-    document.getElementById(this.outputElementId).appendChild(datamatrix);
-    document.getElementById(this.outputElementId).appendChild(code128);
+//    document.getElementById(this.outputElementId).appendChild(datamatrix);
+//    document.getElementById(this.outputElementId).appendChild(code128);
 
   }
 
