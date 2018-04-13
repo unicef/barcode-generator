@@ -12,7 +12,7 @@ import { BarcodeListService} from './barcode-list.service';
 })
 export class AppComponent {
   title = 'app';
-  selectedForm = 'supliers';
+  selectedForm = 'warehouse';
   suplierBarcode = new SuplierBarcode();
   warehouseBarcode = new WarehouseBarcode();
   list : Barcode[];
@@ -29,12 +29,14 @@ export class AppComponent {
     console.log('Generate Suplier Barcode');
     this.list.unshift(this.suplierBarcode);
     console.log(this.list);
+    console.log(this.list[0].buildPayload());
     this.suplierBarcode = new SuplierBarcode()
   }
   generateWarehouseBarcode() {
     console.log('Generate Warehouse Barcode');
     this.list.unshift(this.warehouseBarcode);
     console.log(this.list);
+    console.log(this.list[0].buildPayload());
     this.warehouseBarcode = new WarehouseBarcode()
   }
 }

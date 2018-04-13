@@ -1,22 +1,23 @@
-<form>
+<form #supliersBarcodeForm="ngForm">
+  {{diagnostic}}
   <div>
-    <label for="po-number">Purchase order number</label>
-    <input type="text" id="po-number" name="po-number" [(ngModel)]="barcode.poNumber" required>
+    <label for="po-number"><em>Purchase order number</em></label>
+    <input type="number" id="po-number" name="po-number" [(ngModel)]="barcode.poNumber" required>
   </div>
 
   <div>
     <label for="po-item-number">Purchase order item number</label>
-    <input type="text" id="po-item-number" name="po-item-number" [(ngModel)]="barcode.poItemNumber" required>
+    <input type="number" min="0" step="1" id="po-item-number" name="po-item-number" [(ngModel)]="barcode.poItemNumber" required>
   </div>
 
   <div>
     <label for="material-number">Material number</label>
-    <input type="text" id="material-number" name="material-number" [(ngModel)]="barcode.materialNumber" required>
+    <input class="uppercase" type="text" id="material-number" name="material-number" [(ngModel)]="barcode.materialNumber" required>
   </div>
 
   <div>
     <label for="quantity">Quantity</label>
-    <input type="text" id="quantity" name="quantity" [(ngModel)]="barcode.quantity" required>
+    <input type="number" min="0" id="quantity" name="quantity" [(ngModel)]="barcode.quantity" required>
   </div>
 
   <div>
@@ -26,11 +27,11 @@
 
   <div>
     <label for="manufacturing-date">Manufacturing date (optional)</label>
-    <input type="text" id="manufacturing-date" name="manufacturing-date" [(ngModel)]="barcode.manufacturingDate">
+    <input type="date" id="manufacturing-date" name="manufacturing-date" [(ngModel)]="barcode.manufacturingDate">
   </div>
 
   <div>
     <label for="expiry-date">Expiry date (optional)</label>
-    <input type="text" id="expiry-date" name="expiry-date" [(ngModel)]="barcode.expiryDate">
+    <input type="date" id="expiry-date" name="expiry-date" [(ngModel)]="barcode.expiryDate">
   </div>
 </form>

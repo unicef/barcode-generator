@@ -1,8 +1,8 @@
 
-<app-suplier-barcode-list-item barcode="barcode"
+<app-suplier-barcode-list-item [barcode]="barcode"
   *ngIf="barcode.barcodeType()=='suplier'">
 </app-suplier-barcode-list-item>
-<app-warehouse-barcode-list-item barcode="barcode"
+<app-warehouse-barcode-list-item [barcode]="barcode"
     *ngIf="barcode.barcodeType()=='warehouse'">
   </app-warehouse-barcode-list-item>
 <button (click)="deleteEvent()">Delete</button>

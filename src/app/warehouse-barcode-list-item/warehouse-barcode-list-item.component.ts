@@ -9,8 +9,9 @@ import { WarehouseBarcode} from '../warehouse-barcode'
 export class WarehouseBarcodeListItemComponent implements OnInit {
 
   @Input('barcode') barcode: WarehouseBarcode
-  
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

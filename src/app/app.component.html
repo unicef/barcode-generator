@@ -9,12 +9,11 @@
       <button (click)="showForm('warehouse')" [ngClass]="{'active':(selectedForm=='warehouse')}">Warehouse barcode</button>
     </div>
     <div [hidden]="selectedForm!='supliers'">
-      <app-supliers-form barcode="suplierBarcode"></app-supliers-form>
+      <app-supliers-form [(barcode)]="suplierBarcode"></app-supliers-form>
       <button type="text" (click)="generateSuplierBarcode()">Generate barcode</button>
     </div>
     <div [hidden]="selectedForm!='warehouse'">
-    <app-warehouse-form barcode="warehouseBarcode"></app-warehouse-form>
-    <button type="text" (click)="generateWarehouseBarcode()">Generate barcode</button>
+    <app-warehouse-form [(barcode)]="warehouseBarcode" (generateBarcode)="generateWarehouseBarcode()"></app-warehouse-form>
   </div>
   </section>
 

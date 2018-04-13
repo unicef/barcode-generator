@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { WarehouseBarcode } from '../warehouse-barcode'
 @Component({
   selector: 'app-warehouse-form',
@@ -8,13 +8,18 @@ import { WarehouseBarcode } from '../warehouse-barcode'
 export class WarehouseFormComponent implements OnInit {
 
   @Input('barcode') barcode: WarehouseBarcode
+  @Output() generateBarcode = new EventEmitter<WarehouseBarcode>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  generateBarcode() {
+  generateBarcodeClicked(){
+    console.log("New Barcode");
+    this.generateBarcode.emit(this.barcode);
+  }
+  //generateBarcode() {
     //build payload
 //    let datamatrix = this.barcode.generateBarcode('datamatrix');
 //    let code128 = this.barcode.generateBarcode('code128');
@@ -22,7 +27,7 @@ export class WarehouseFormComponent implements OnInit {
 //    document.getElementById(this.outputElementId).appendChild(datamatrix);
 //    document.getElementById(this.outputElementId).appendChild(code128);
 
-  }
+  //}
 
 
 }

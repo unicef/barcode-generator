@@ -1,11 +1,20 @@
-<form>
+<form #warehouseForm="ngForm">
+  {{diagnostic}}
   <div>
     <label for="delivery-number">Delivery number</label>
-    <input type="text" id="delivery-number" name="delivery-number" [(ngModel)]="barcode.deliveryNumber" required>
-  </div>
+    <input type="text" maxlength="8" pattern="[0-9]*" id="delivery-number"
+      name="delivery-number"
+      [(ngModel)]="barcode.deliveryNumber" required #spy>
 
+  </div>
+  TODO: Spy: {{spy.className}}
+  <br>
+TODO: delivery: {{barcode.deliveryNumber}}
   <div>
     <label for="item-number">Item number</label>
-    <input type="text" id="item-number" name="po-item-number" [(ngModel)]="barcode.itemNumber" required>
+    <input type="text" id="item-number" maxlength="4"
+      pattern="[0-9]*" name="po-item-number"
+      [(ngModel)]="barcode.itemNumber" required>
   </div>
+  <button type="submit" (click)="generateBarcodeClicked()" [disabled]="!warehouseForm.form.valid">Generate barcode</button>
 </form>
