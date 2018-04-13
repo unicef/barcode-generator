@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 $brand-color: rgb(0,155,255);
-
+$field-border-color: #C0C0C0;
 html {
   font-size: 62.5%;
 }
@@ -22,8 +22,13 @@ input {
   font-size: 1.4rem;
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border-radiu: 2px;
+  border-radius: 2px;
+  border: 1px solid $field-border-color;
   width: 100%;
+
+  &.uppercase {
+   text-transform: uppercase;
+  }
 }
 
 .button-grp {
@@ -47,4 +52,21 @@ button {
  display: grid;
  grid-template-columns: 300px 1fr;
  grid-gap: 20px;
+}
+
+label {
+  em {
+    
+  }
+}
+.ng-untouched[required] {
+  background-color: #FFFABE;
+}
+// Forms
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form).ng-touched  {
+  border-bottom: 2px solid #a94442; /* red */
 }
