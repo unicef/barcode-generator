@@ -17,6 +17,7 @@ export class WarehouseFormComponent implements OnInit {
 
   generateBarcodeClicked(){
     console.log("New Barcode");
+    this.barcode.generateBarcode("code128");
     this.generateBarcode.emit(this.barcode);
   }
   //generateBarcode() {

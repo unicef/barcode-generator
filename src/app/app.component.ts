@@ -30,7 +30,7 @@ export class AppComponent {
     this.list.unshift(this.suplierBarcode);
     console.log(this.list);
     console.log(this.list[0].buildPayload());
-    this.suplierBarcode = new SuplierBarcode()
+    this.suplierBarcode = new SuplierBarcode();
   }
   generateWarehouseBarcode() {
     console.log('Generate Warehouse Barcode');

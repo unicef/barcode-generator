@@ -16,4 +16,8 @@ export class WarehouseBarcodeListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    console.log("holitass");
+    document.getElementById(this.barcode.deliveryNumber).appendChild(this.barcode.canvas);
+  }
 }

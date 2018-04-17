@@ -1,5 +1,15 @@
-<ul>
-  <li>{{barcode}}</li>
-  <li>delivery number: {{barcode.deliveryNumber}}</li>
-  <li>Item Number: {{barcode.itemNumber}}</li>
-</ul>
+<section>
+  <header>
+    <img title="Logo" src="assets/logo.svg">
+  </header>
+  <dl>
+    <dt>Delivery number</dt>
+    <dd>{{barcode.deliveryNumber}}</dd>
+    <dt>Item number</dt>
+    <dd>{{barcode.itemNumber}}</dd>
+  </dl>
+  <footer>
+    <div id="{{barcode.deliveryNumber}}">
+    </div>
+  </footer>
+</section>
