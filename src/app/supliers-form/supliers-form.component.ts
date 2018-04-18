@@ -18,8 +18,6 @@ export class SupliersFormComponent implements OnInit {
   }
 
   generateBarcodeClicked(){
-    console.log("New Barcode");
-    this.barcode.generateBarcode("datamatrix");
     this.generateBarcode.emit(this.barcode);
   }
 }

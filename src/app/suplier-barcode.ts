@@ -3,12 +3,12 @@ import { Barcode } from './barcode'
 export class SuplierBarcode extends Barcode {
 
   public poNumber: number;
-  public poItemNumber: string;
-  public materialNumber: string;
-  public quantity: string;
-  public batchNumber: string;
-  public manufacturingDate: string;
-  public expiryDate: string;
+  public poItemNumber: string ="";
+  public materialNumber: string ="";
+  public quantity: string ="";
+  public batchNumber: string ="";
+  public manufacturingDate: string ="";
+  public expiryDate: string ="";
 
   constructor() {
     super();

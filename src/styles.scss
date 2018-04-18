@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 $brand-color: rgb(0,155,255);
+
+$success-color: #42A948; /* green */
+$danger-color: #a94442; /* red */
+$mandatory-color: #FFFABE;
+
 $field-border-color: #C0C0C0;
+
+
 html {
   font-size: 62.5%;
 }
@@ -16,6 +23,10 @@ body {
 label {
   line-height: 2rem;
   display: block;
+  em:after {
+    color: $danger-color;
+    content: "*";
+  }
 }
 
 input {
@@ -46,27 +57,15 @@ button {
   }
 }
 
-// GRID SYSTEM
 
-.grid-container {
- display: grid;
- grid-template-columns: 300px 1fr;
- grid-gap: 20px;
-}
-
-label {
-  em {
-    
-  }
-}
 .ng-untouched[required] {
-  background-color: #FFFABE;
+  background-color: $mandatory-color;
 }
 // Forms
 .ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+  border-left: 5px solid $success-color;
 }
 
-.ng-invalid:not(form).ng-touched  {
-  border-bottom: 2px solid #a94442; /* red */
+.ng-invalid:not(form)  {
+  border-bottom: 2px solid $danger-color;
 }

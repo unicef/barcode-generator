@@ -1,8 +1,30 @@
-
-<app-suplier-barcode-list-item [barcode]="barcode"
-  *ngIf="barcode.barcodeType()=='suplier'">
-</app-suplier-barcode-list-item>
-<app-warehouse-barcode-list-item [barcode]="barcode"
-    *ngIf="barcode.barcodeType()=='warehouse'">
-  </app-warehouse-barcode-list-item>
-<button (click)="deleteEvent()">Delete</button>
+<button (click)="toggleEdit()">Edit</button> <button (click)="deleteEvent()">Delete</button>
+<section class="barcode-list-item">
+  <header>
+    <img src="assets/logo.svg">
+  </header>
+  <div *ngIf="barcode.barcodeType()=='suplier'">
+    <app-suplier-barcode-list-item [barcode]="barcode" [hidden]="editMode">
+    </app-suplier-barcode-list-item>
+    <app-supliers-form
+      [barcode]="barcode"
+      [hidden]="!editMode"
+      (generateBarcode)="generateBarcode('suplier')">
+    </app-supliers-form>
+  </div>
+  <div *ngIf="barcode.barcodeType()=='warehouse'">
+    <app-warehouse-barcode-list-item [barcode]="barcode" [hidden]="editMode">
+    </app-warehouse-barcode-list-item>
+    <app-warehouse-form
+      [barcode]="barcode"
+      [hidden]="!editMode"
+      (generateBarcode)="generateBarcode('warehouse')">
+    </app-warehouse-form>
+  </div>
+<footer>
+  <div #canvasDiv>
+    holitas
+  </div>
+  <small>{{barcode.payload}}</small>
+</footer>
+</section>

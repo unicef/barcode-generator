@@ -15,9 +15,4 @@ export class SuplierBarcodeListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
-    console.log("holitass " + this.barcode.payload);
-    document.getElementById(this.barcode.payload).appendChild(this.barcode.canvas);
-  }
-
 }
