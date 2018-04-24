@@ -1,8 +1,8 @@
-<ul>
+<ul class="list-unstyled">
   <li *ngFor="let barcode of list;index as i">
     <app-barcode-list-item [barcode]="barcode" (delete)="delete(i)">
     </app-barcode-list-item>
-    {{barcode.barcodeType()}}
+    <!-- {{barcode.barcodeType()}} -->
     <!-- index: {{i}} -->
   </li>
 </ul>

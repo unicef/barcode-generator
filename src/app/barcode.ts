@@ -25,7 +25,7 @@ export abstract class Barcode {
        scale: 2,                 // 3x scaling factor
        height: this.height,               // Bar height, in millimeters
        width: this.width,
-       includetext: true,        // Show human-readable text
+       includetext: false,        // Show human-readable text
        textxalign: 'center',      // Always good to set this
      }, function (err, cvs) {
        if (err) {
