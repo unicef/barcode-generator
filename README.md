@@ -1,13 +1,13 @@
 # Barcode Generator
 
-(UNICEF)[http://www.unicef.org]´s barcode generator is a simple web app that
+[UNICEF](http://www.unicef.org)´s barcode generator is a simple web app that
 helps UNICEF´s suppliers to ship packages with a standardised barcode label.
 
 The current status of this project is: **Work in progress. It is not ready for production use yet.**
 
 You can see a deployment of the project in:
 
-## (Generate barcodes)[http://github.io/merlos/barcode-generator]
+## [Generate barcodes](http://github.io/merlos/barcode-generator)
 
 Setting your own development environment:
 
@@ -42,7 +42,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 $ ng build --prod --base-ref /barcode-generator/
 ```
 
-More info about `ng build` in (angular-cli Wiki)[https://github.com/angular/angular-cli/wiki/build]
+More info about `ng build` in [angular-cli Wiki](https://github.com/angular/angular-cli/wiki/build)
 
 
 ## Running unit tests (TODO)
