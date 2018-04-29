@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+$brand-color: rgb(0,155,255);
+
+$light-text: #999;
+$success-color: #42A948; /* green */
+$danger-color: #a94442; /* red */
+$mandatory-color: #FFFABE;
+
+$field-border-color: #C0C0C0;
+
+// Required
+//@import "../node_modules/bootstrap/scss/functions";
+//@import "../node_modules/bootstrap/scss/variables";
+//@import "../node_modules/bootstrap/scss/mixins";
+// Optional
+//@import "../node_modules/bootstrap/scss/reboot";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+html {
+}
+
+body {
+  background-color: #F0F0FF;
+  font-family: Helvetica;
+
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+header {
+ width:100%;
+ color: white;
+ padding: 0.4rem;
+ background-color: $brand-color;
+ h1 {
+   font-size: 2rem;
+   padding: 0px;
+   margin: 0px;
+ }
+}
+
+dl {
+  display: block;
+  flex-direction: row;
+  dt {
+    width: 30%;
+    float: left;
+  }
+  dd {
+    width: 68%;
+    float: right;
+  }
+}
+
+footer {
+  /*position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;*/
+  background-color: white;
+  padding-bottom: 3rem;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 1.2rem;
+  color: $light-text;
+  .heart:before {
+    color: $danger-color;
+  content: '\2665';
+  }
+}
+
+label {
+  width:22%;
+  line-height: 2rem;
+  text-align:right;
+  em:after {
+    color: $danger-color;
+    content: "*";
+  }
+}
+
+input {
+  width:48%;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  border: 1px solid $field-border-color;
+
+  &.uppercase {
+   text-transform: uppercase;
+  }
+}
+
+.ng-untouched[required] {
+  background-color: $mandatory-color;
+}
+// Forms
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid $success-color;
+}
+
+.ng-invalid:not(form)  {
+  border-bottom: 2px solid $danger-color;
+}

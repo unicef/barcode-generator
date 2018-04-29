@@ -1,0 +1,34 @@
+<div class="card mt-3" style="">
+  <div class="card-header">
+    <img src="assets/logo.svg">
+      <button class="btn btn-link float-right d-print-none" (click)="deleteEvent()">Delete</button>
+    <button class="btn btn-link float-right d-print-none" (click)="toggleEdit()">Edit</button>
+
+
+  </div>
+  <div class="card-body">
+    <div *ngIf="barcode.barcodeType()=='suplier'">
+      <app-suplier-barcode-list-item [barcode]="barcode" [hidden]="editMode">
+      </app-suplier-barcode-list-item>
+      <app-supliers-form
+        [barcode]="barcode"
+        [hidden]="!editMode"
+        (generateBarcode)="generateBarcode('suplier')">
+      </app-supliers-form>
+    </div>
+    <div *ngIf="barcode.barcodeType()=='warehouse'">
+      <app-warehouse-barcode-list-item [barcode]="barcode" [hidden]="editMode">
+      </app-warehouse-barcode-list-item>
+      <app-warehouse-form
+        [barcode]="barcode"
+        [hidden]="!editMode"
+        (generateBarcode)="generateBarcode('warehouse')">
+      </app-warehouse-form>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent text-center">
+    <div #canvasDiv>
+    </div>
+    <p>{{barcode.payload}}</p>
+  </div>
+</div>
