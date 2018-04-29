@@ -3,7 +3,7 @@ import { Barcode } from './barcode'
 export class SuplierBarcode extends Barcode {
 
   public poNumber: number;
-  public poItemNumber: string ="";
+  public itemNumber: string ="";
   public materialNumber: string ="";
   public quantity: string ="";
   public batchNumber: string ="";
