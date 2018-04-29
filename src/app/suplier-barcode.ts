@@ -17,7 +17,7 @@ export class SuplierBarcode extends Barcode {
   //
   buildPayload() : string {
     return (this.poNumber + "~"
-      + this.poItemNumber + "~"
+      + this.itemNumber + "~"
       + this.materialNumber + "~"
       + this.quantity + "~"
       + this.batchNumber + "~"
