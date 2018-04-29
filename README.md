@@ -32,12 +32,12 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build and `--base-ref` to set the base tag (`<base href="/">`) in your index.html.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build and `--base-href` to set the base tag (`<base href="/">`) in your index.html.
 
 ```
 # Example build to deploy in GitHub
 
-$ ng build --prod --base-ref /barcode-generator/
+$ ng build --prod --base-href /barcode-generator/
 ```
 
 More info about `ng build` in [angular-cli Wiki](https://github.com/angular/angular-cli/wiki/build)

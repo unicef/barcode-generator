@@ -14,7 +14,7 @@ install:
 # build the project
 #
 script:
-  - ng build --prod --base-ref /barcode-generator/
+  - ng build --prod --base-href=/barcode-generator/
 
 #
 # Deploy to gh-pages branch on github
