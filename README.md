@@ -5,9 +5,7 @@ helps UNICEF´s suppliers to ship packages with a standardised barcode label.
 
 The current status of this project is: **Work in progress. It is not ready for production use yet.**
 
-You can see a deployment of the project in:
-
-## [Generate barcodes](http://github.io/merlos/barcode-generator)
+Live version: **[Generate barcodes](http://github.io/merlos/barcode-generator)**
 
 Setting your own development environment:
 
@@ -34,7 +32,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build and `--base-ref` to set the base tag (<base href="/">) in your index.html.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build and `--base-ref` to set the base tag (`<base href="/">`) in your index.html.
 
 ```
 # Example build to deploy in GitHub
