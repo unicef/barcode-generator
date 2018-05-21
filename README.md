@@ -5,7 +5,7 @@ helps UNICEF´s suppliers to ship packages with a standardised barcode label.
 
 The current status of this project is: **Work in progress. It is not ready for production use yet.**
 
-Live version: **[Generate barcodes](http://github.io/merlos/barcode-generator)**
+Live version: **[Generate barcodes](http://unicef.github.io/barcode-generator)**
 
 Setting your own development environment:
 
