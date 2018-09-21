@@ -17,46 +17,6 @@ $field-border-color: #C0C0C0;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-
-html {
-}
-
-body {
-  background-color: #F0F0FF;
-  font-family: Helvetica;
-
-  position: relative;
-  padding: 0px;
-  margin: 0px;
-  padding-bottom: 6rem;
-  min-height: 100%;
-}
-
-header {
- width:100%;
- color: white;
- padding: 0.4rem;
- background-color: $brand-color;
- h1 {
-   font-size: 2rem;
-   padding: 0px;
-   margin: 0px;
- }
-}
-
-dl {
-  display: block;
-  flex-direction: row;
-  dt {
-    width: 30%;
-    float: left;
-  }
-  dd {
-    width: 68%;
-    float: right;
-  }
-}
-
 footer {
   /*position: absolute;
   right: 0;
@@ -74,28 +34,6 @@ footer {
   }
 }
 
-label {
-  width:22%;
-  line-height: 2rem;
-  text-align:right;
-  em:after {
-    color: $danger-color;
-    content: "*";
-  }
-}
-
-input {
-  width:48%;
-  font-size: 1.4rem;
-  padding: 0.4rem;
-  margin-bottom: 1rem;
-  border-radius: 2px;
-  border: 1px solid $field-border-color;
-
-  &.uppercase {
-   text-transform: uppercase;
-  }
-}
 
 .ng-untouched[required] {
   background-color: $mandatory-color;

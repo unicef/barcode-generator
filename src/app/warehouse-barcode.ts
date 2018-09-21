@@ -2,7 +2,7 @@ import { Barcode } from './barcode'
 
 export class WarehouseBarcode extends Barcode {
   public deliveryNumber: string = "";
-  public itemNumber: string = "";
+  public handlingUnit: string = "";
 
 
   public height = 20;
@@ -14,7 +14,7 @@ export class WarehouseBarcode extends Barcode {
   }
 
   buildPayload() : string {
-    return this.deliveryNumber + this.itemNumber;
+    return this.deliveryNumber + this.handlingUnit;
   }
 
   barcodeType() : string {
