@@ -45,22 +45,26 @@
   </div>
 
   <div class="form-group row">
-    <label for="expiry-date" class="col-sm-5 col-form-label">
-      Expiry date (optional)
-    </label>
-    <input type="date" id="expiry-date" name="expiry-date"
-      class="form-control col-sm-4"
-      [(ngModel)]="barcode.expiryDate">
-  </div>
-
-  <div class="form-group row">
     <label for="manufacturing-date" class="col-sm-5 col-form-label">
       Manufacturing date (optional)
     </label>
     <input type="date" id="manufacturing-date" name="manufacturing-date"
       class="form-control col-sm-4"
+      max="2100-00-00"
       [(ngModel)]="barcode.manufacturingDate">
   </div>
+
+  <div class="form-group row">
+    <label for="expiry-date" class="col-sm-5 col-form-label">
+      Expiry date (optional)
+    </label>
+    <input type="date" id="expiry-date" name="expiry-date"
+      max="2100-00-00"
+      class="form-control col-sm-4"
+      [(ngModel)]="barcode.expiryDate">
+  </div>
+
+
 
     <button type="submit" class="btn btn-primary offset-sm-5"
       (click)="generateBarcodeClicked()"
