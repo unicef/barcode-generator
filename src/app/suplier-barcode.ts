@@ -30,7 +30,7 @@ export class SuplierBarcode extends Barcode {
       + this.itemNumber + "~"
       + this.materialNumber + "~"
       + this.quantity
-    if this.batchNumber.length > 0 {
+    if (this.batchNumber.length > 0) {
       payload += "~"
         + this.batchNumber + "~"
         + this.dateToBarcodeString(this.manufacturingDate) + "~"
