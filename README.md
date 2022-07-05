@@ -1,5 +1,9 @@
 # Barcode Generator
 
+-----
+### This repository is archived and will no longer receive updates
+----
+
 [UNICEF](http://www.unicef.org)´s barcode generator is a simple web app that
 helps UNICEF´s suppliers to ship packages with a standardised barcode label.
 
